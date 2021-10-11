@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Helper
 {
-    public static class BatteryHelper
+    static class BatteryHelper
     {     
         public static bool IsChargeRateInRange(float chargeRate)
         {
