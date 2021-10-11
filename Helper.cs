@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Helper
 {
-    internal class Helper
+    internal class BatteryHelper
     {     
         LiionBattery _objLiionBattery = new LiionBattery();
         
