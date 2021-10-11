@@ -7,7 +7,7 @@ namespace Helper
 {
     public static class BatteryHelper
     {     
-        public bool IsChargeRateInRange(float chargeRate)
+        public static bool IsChargeRateInRange(float chargeRate)
         {
              if (chargeRate > 0.8)
                 return false;
@@ -15,7 +15,7 @@ namespace Helper
                 return true;
         }
 
-        private bool IsSOCInRange(float soc)
+        private static bool IsSOCInRange(float soc)
         {
             if (soc < 20 || soc > 80)
                 return false;
@@ -23,7 +23,7 @@ namespace Helper
                 return true;
         }
 
-        private bool IsTempInRange(double temperature)
+        private static bool IsTempInRange(double temperature)
         {
             if (temperature < 0 || temperature > 45)
                 return false;
