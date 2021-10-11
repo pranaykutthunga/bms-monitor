@@ -7,15 +7,6 @@ namespace Helper
 {
     public static class BatteryHelper
     {     
-        LiionBattery _objLiionBattery = new LiionBattery();
-        
-        public BatteryHelper(float temp, float soc, float chargeRate)
-        {
-            _objLiionBattery.Temperature = temp;
-            _objLiionBattery.Soc = soc;
-            _objLiionBattery.ChargeRate = chargeRate;
-        }
-
         public bool IsChargeRateInRange(float chargeRate)
         {
              if (chargeRate > 0.8)
@@ -51,7 +42,7 @@ namespace Helper
               throw ex;
             }
         }
-        public static bool IsBatteryIsOk()
+        public static bool IsBatteryIsOk(LiionBattery _objLiionBattery)
         {
              if (!IsTempInRange(_objLiionBattery.Temperature))
               {
