@@ -17,10 +17,10 @@ class Checker
         }
     }
     static int Main() {
-        var batteryHelper =BatteryHelper(25, 70, 0.7f);
+        var batteryHelper =new BatteryHelper(25, 70, 0.7f);
         ExpectTrue(batteryHelper.IsBatteryIsOk());
         
-        var helper =BatteryHelper(50, 85, 0.0f);
+        var helper =new BatteryHelper(50, 85, 0.0f);
         ExpectFalse(batteryHelper.IsBatteryIsOk());
         
         
