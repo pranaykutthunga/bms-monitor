@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-using BatteryHelper;
+using Helper;
 
 class Checker
 {
