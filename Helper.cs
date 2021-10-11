@@ -9,7 +9,7 @@ namespace Helper
     {     
         LiionBattery _objLiionBattery = new LiionBattery();
         
-        public Helper(float temp, float soc, float chargeRate)
+        public BatteryHelper(float temp, float soc, float chargeRate)
         {
             _objLiionBattery.Temperature = temp;
             _objLiionBattery.Soc = soc;
