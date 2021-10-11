@@ -15,7 +15,7 @@ namespace Helper
                 return true;
         }
 
-        private static bool IsSOCInRange(float soc)
+        public static bool IsSOCInRange(float soc)
         {
             if (soc < 20 || soc > 80)
                 return false;
@@ -23,7 +23,7 @@ namespace Helper
                 return true;
         }
 
-        private static bool IsTempInRange(double temperature)
+        public static bool IsTempInRange(double temperature)
         {
             if (temperature < 0 || temperature > 45)
                 return false;
