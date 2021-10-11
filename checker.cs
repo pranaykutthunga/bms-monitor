@@ -17,8 +17,21 @@ class Checker
         }
     }
     static int Main() {
-        ExpectTrue(BatteryHelper.IsBatteryIsOk(25, 70, 0.7f));
-        ExpectFalse(BatteryHelper.IsBatteryIsOk(50, 85, 0.0f));
+        LiionBattery _objLiionBattery = new LiionBattery()  
+        {  
+            Temperature  = 25,   
+            Soc  = 70,  
+            ChargeRate  = 0.7f
+        };  
+        ExpectTrue(BatteryHelper.IsBatteryIsOk(_objLiionBattery));
+        
+        _objLiionBattery = new LiionBattery()  
+        {  
+            Temperature  = 50,   
+            Soc  = 85,  
+            ChargeRate  = 0.0f
+        };  
+        ExpectFalse(BatteryHelper.IsBatteryIsOk(_objLiionBattery));
         
         
         Console.WriteLine("All ok");
