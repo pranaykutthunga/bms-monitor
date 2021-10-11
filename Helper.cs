@@ -28,7 +28,8 @@ namespace Helper
             catch(Exception ex)
             {
               throw ex;
-            }            
+            }   
+            return true;
         }
 
         private bool IsSOCInRange(float soc)
@@ -44,6 +45,7 @@ namespace Helper
             {
               throw ex;
             }  
+            return true;
         }
 
         private bool IsTempInRange(double temperature)
@@ -59,6 +61,7 @@ namespace Helper
             {
               throw ex;
             }  
+            return true;
         }
         
         private void OutputInformation(string message)
