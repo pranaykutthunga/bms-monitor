@@ -6,22 +6,19 @@ class Checker
 {
     static void ExpectTrue(bool expression) {
         if(!expression) {
-            Console.WriteLine("Expected true, but got false");
+            BatteryHelper.OutputInformation("Expected true, but got false");
             Environment.Exit(1);
         }
     }
     static void ExpectFalse(bool expression) {
         if(expression) {
-            Console.WriteLine("Expected false, but got true");
+            BatteryHelper.OutputInformation("Expected false, but got true");
             Environment.Exit(1);
         }
     }
     static int Main() {
-        var batteryHelper =new BatteryHelper(25, 70, 0.7f);
-        ExpectTrue(batteryHelper.IsBatteryIsOk());
-        
-        var helper =new BatteryHelper(50, 85, 0.0f);
-        ExpectFalse(batteryHelper.IsBatteryIsOk());
+        ExpectTrue(BatteryHelper.IsBatteryIsOk(25, 70, 0.7f));
+        ExpectFalse(BatteryHelper.IsBatteryIsOk(50, 85, 0.0f));
         
         
         Console.WriteLine("All ok");
