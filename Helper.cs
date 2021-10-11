@@ -18,7 +18,7 @@ namespace Helper
 
         public bool IsChargeRateInRange(float chargeRate)
         {
-             if (_objLiionBattery.ChargeRate > 0.8)
+             if (chargeRate > 0.8)
                 return false;
               else
                 return true;
@@ -26,7 +26,7 @@ namespace Helper
 
         private bool IsSOCInRange(float soc)
         {
-            if (_objLiionBattery.Soc < 20 || _objLiionBattery.Soc > 80)
+            if (soc < 20 || soc > 80)
                 return false;
               else
                 return true;
@@ -34,7 +34,7 @@ namespace Helper
 
         private bool IsTempInRange(double temperature)
         {
-            if (_objLiionBattery.Temperature < 0 || _objLiionBattery.Temperature > 45)
+            if (temperature < 0 || temperature > 45)
                 return false;
             else
                 return true;
