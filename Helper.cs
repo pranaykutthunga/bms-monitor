@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Helper
 {
-    internal class BatteryHelper
+    public static class BatteryHelper
     {     
         LiionBattery _objLiionBattery = new LiionBattery();
         
@@ -40,7 +40,7 @@ namespace Helper
                 return true;
         }
         
-        private void OutputInformation(string message)
+       public static void OutputInformation(string message)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace Helper
               throw ex;
             }
         }
-        internal bool IsBatteryIsOk()
+        public static bool IsBatteryIsOk()
         {
              if (!IsTempInRange(_objLiionBattery.Temperature))
               {
