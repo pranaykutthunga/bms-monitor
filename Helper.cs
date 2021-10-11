@@ -72,7 +72,7 @@ namespace Helper
               throw ex;
             }
         }
-        internal bool BatteryIsOk()
+        internal bool IsBatteryIsOk()
         {
             try
             {
