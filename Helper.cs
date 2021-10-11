@@ -18,50 +18,26 @@ namespace Helper
 
         public bool IsChargeRateInRange(float chargeRate)
         {
-            try
-            {
-              if (chargeRate > 0.8)
+             if (chargeRate > 0.8)
                 return false;
               else
                 return true;
-            }
-            catch(Exception ex)
-            {
-              throw ex;
-            }   
-            return true;
         }
 
         private bool IsSOCInRange(float soc)
         {
-            try
-            {
-              if (soc < 20 || soc > 80)
+            if (soc < 20 || soc > 80)
                 return false;
               else
                 return true;
-            }
-            catch(Exception ex)
-            {
-              throw ex;
-            }  
-            return true;
         }
 
         private bool IsTempInRange(double temperature)
         {
-            try
-            {
-              if (temperature < 0 || temperature > 45)
+            if (temperature < 0 || temperature > 45)
                 return false;
             else
                 return true;
-            }
-            catch(Exception ex)
-            {
-              throw ex;
-            }  
-            return true;
         }
         
         private void OutputInformation(string message)
@@ -77,9 +53,7 @@ namespace Helper
         }
         internal bool IsBatteryIsOk()
         {
-            try
-            {
-              if (!IsTempInRange(_objLiionBattery.Temperature))
+             if (!IsTempInRange(_objLiionBattery.Temperature))
               {
                   OutputInformation("Temperature is out of range!");
                   return false;
@@ -94,11 +68,6 @@ namespace Helper
                   OutputInformation("Charge Rate is out of range!");
                   return false;
               }
-            }
-            catch(Exception ex)
-            {
-              throw ex;
-            }
             return true;
         }
     }
